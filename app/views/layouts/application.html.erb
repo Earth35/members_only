@@ -2,12 +2,13 @@
 <html>
 <head>
   <title>MembersOnly</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<!-- temporary link - will be replaced within header partial -->
+<%= link_to "Log in", login_path %>
 <%= yield %>
 
 </body>
