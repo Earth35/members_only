@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
   
+  def self.digest (string)
+    Digest::SHA1.hexdigest(string)
+  end
+  
   private
   
     def generate_remember_token
