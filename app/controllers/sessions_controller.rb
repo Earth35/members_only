@@ -7,10 +7,15 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in(user)
       flash[:success] = "You've successfully logged in."
-      redirect_to '/'
+      # temporary redirect - will be replaced!
+      redirect_to login_path
     else
       flash.now[:danger] = "Invalid email and/or password."
       render 'new'
     end
+  end
+  
+  def destroy
+    log_out if !current_user.nil?
   end
 end

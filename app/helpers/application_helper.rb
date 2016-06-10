@@ -8,7 +8,9 @@ module ApplicationHelper
   end
   
   def log_out
-    session[:user_id] = nil
+    cookies.delete(:remember_token)
+    @current_user = nil
+    redirect_to login_path
   end
   
   def current_user
