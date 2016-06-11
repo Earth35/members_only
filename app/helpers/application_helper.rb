@@ -14,7 +14,11 @@ module ApplicationHelper
   end
   
   def current_user
-    return nil if User.find_by(remember_token: User.digest(cookies[:remember_token])).nil?
+    return nil if cookies[:remember_token].nil?
     @current_user ||= User.find_by(remember_token: User.digest(cookies[:remember_token]))
+  end
+  
+  def logged_in?
+    current_user
   end
 end
