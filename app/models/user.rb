@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
   
+  has_many :posts
+  
   def self.digest (string)
     Digest::SHA1.hexdigest(string)
   end
