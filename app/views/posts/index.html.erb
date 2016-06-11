@@ -9,7 +9,7 @@
       <% if current_user %>
         <%= p.user.username %></p>
       <% else %>
-        <i>hidden, please log in</i>
+        <span class="login-info"><i>hidden, please log in</i></span>
       <% end %>
     <% end %>
     <%= link_to "New post", posts_path %>
