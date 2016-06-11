@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   
   root 'posts#index'
   
-  get 'new_post' => 'posts#new'
-  get 'posts' => 'posts#index'
-
+  get 'posts_index' => 'posts#index'
+  get 'posts' => 'posts#new'
+  post 'posts' => 'posts#create'
+  
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

@@ -16,7 +16,6 @@ class PostsController < ApplicationController
     def require_login
       unless logged_in?
         flash[:error] = "Please log in."
-        byebug
         redirect_to login_path
       end
     end
