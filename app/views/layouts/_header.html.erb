@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="logo">
+    <% if current_user.nil? %>
+      <%= link_to image_tag("logo.png", alt: "Secret Club logo"), login_path %>
+    <% else %>
+      <%= link_to image_tag("logo.png", alt: "Secret Club logo"), posts_index_path %>
+    <% end %>
+  </div>
+  <div class="nav">
+    <%= link_to "Posts", posts_index_path %>
+    <% if cookies[:remember_token].nil? %>
+      <%= link_to "Log in", login_path, class: "nav-content" %><br/>
+    <% else %>
+      <%= link_to "Log out", logout_path, method: :delete %>
+    <% end %>
+  </div>
+</div>
