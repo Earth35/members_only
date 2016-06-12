@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   
   root 'posts#index'
   
+  get 'about' => 'static#about'
+  get 'contact' => 'static#contact'
+  
   get 'posts_index' => 'posts#index'
   get 'posts' => 'posts#new'
   post 'posts' => 'posts#create'
