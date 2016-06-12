@@ -1,0 +1,215 @@
+/* vars */
+/* mixins */
+/* global */
+/* line 58, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+body {
+  margin: 0;
+}
+
+/* line 62, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: arial, sans-serif;
+  letter-spacing: -1px;
+}
+
+/* header */
+/* line 71, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.header {
+  border-radius: 3px;
+  height: 50px;
+  background-color: black;
+  width: 100%;
+}
+/* line 76, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.header .logo {
+  float: left;
+  height: 100%;
+}
+/* line 21, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.header .nav {
+  height: 100%;
+  margin-right: 25px;
+  display: flex;
+  float: right;
+  padding: 0;
+  width: 40%;
+  justify-content: space-between;
+}
+/* line 29, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.header .nav a {
+  font-family: arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: -1px;
+  color: black;
+  text-shadow: 2px 2px 2px #434343;
+  background-color: #005700;
+  height: 50px;
+  line-height: 50px;
+  width: 120px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+  border: 3px groove #4DB441;
+  box-sizing: border-box;
+  /* gradient */
+  background: #005700;
+  /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(#52b152 15%, #008a00 45%, #005700 85%);
+  /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#52b152 15%, #008a00 45%, #005700 85%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#52b152 15%, #008a00 45%, #005700 85%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#52b152 15%, #008a00 45%, #005700 85%);
+  /* Standard syntax */
+}
+
+/* form */
+/* line 85, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main {
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  padding: 30px 0 30px 0;
+  background: #d8e0de;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d8e0de 5%, #aebfbc 57%, #99afab 73%, #8ea6a2 92%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #d8e0de 5%, #aebfbc 57%, #99afab 73%, #8ea6a2 92%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #d8e0de 5%, #aebfbc 57%, #99afab 73%, #8ea6a2 92%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+/* line 94, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main form {
+  width: 100%;
+}
+/* line 96, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main form label {
+  display: block;
+  margin: auto;
+  color: black;
+  font-family: arial, sans-serif;
+  font-size: 1.6em;
+  letter-spacing: -1px;
+  width: 95%;
+}
+/* line 105, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main form input {
+  width: 95%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+  border: 3px inset #4DB441;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+/* line 114, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main form textarea {
+  width: 95%;
+  height: 75px;
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  margin-bottom: 15px;
+}
+/* line 122, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main form .btn {
+  width: 80%;
+  height: 35px;
+  font-family: arial, sans-serif;
+  font-size: 1.5em;
+  color: #d8e0de;
+  margin: 5px auto 5px auto;
+  display: block;
+  border: none;
+}
+/* line 133, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main form .btn-primary {
+  background: #83c783;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, #83c783 17%, #52b152 33%, #008a00 67%, #005700 83%, #002400 100%);
+  /* Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, #83c783 17%, #52b152 33%, #008a00 67%, #005700 83%, #002400 100%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-linear-gradient(top, #83c783 17%, #52b152 33%, #008a00 67%, #005700 83%, #002400 100%);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #83c783 17%, #52b152 33%, #008a00 67%, #005700 83%, #002400 100%);
+  /* Standard syntax */
+}
+
+/* index */
+/* line 145, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main h2 {
+  font-family: arial, sans-serif;
+  color: black;
+  font-size: 1.3em;
+  margin: 1% 1% 1% 1%;
+}
+/* line 151, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main .post_body, .col-main .post_author {
+  font-family: arial, sans-serif;
+  font-size: 1em;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1%;
+  margin-top: 0;
+  display: block;
+}
+/* line 160, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main .post_author {
+  font-family: arial narrow, sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 1%;
+}
+/* line 169, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main a {
+  display: block;
+  font-family: arial, sans-serif;
+  width: 25%;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  font-size: 2em;
+  color: #d8e0de;
+  text-shadow: 2px 2px 2px #aebfbc;
+  text-decoration: none;
+  border: 2px solid #d8e0de;
+  border-radius: 3px;
+}
+
+/* line 185, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main-extend {
+  width: 75%;
+}
+/* line 187, c:/Users/Krzysiek/Desktop/the_odin_project/rails-course/members_only/app/assets/stylesheets/custom.scss */
+.col-main-extend p {
+  font-family: arial;
+  font-size: 1.1em;
+  color: #000;
+  margin: auto 3% 10px 3%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
