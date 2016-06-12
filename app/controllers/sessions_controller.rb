@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       flash[:success] = "You've successfully logged in."
       redirect_to posts_index_path
     else
-      flash.now[:danger] = "Invalid email and/or password."
+      flash.now[:error] = "Invalid email and/or password."
       render 'new'
     end
   end

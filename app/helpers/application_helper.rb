@@ -10,6 +10,7 @@ module ApplicationHelper
   def log_out
     cookies.delete(:remember_token)
     @current_user = nil
+    flash[:success] = "You've successfully logged out."
     redirect_to login_path
   end
   

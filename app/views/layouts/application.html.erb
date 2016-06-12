@@ -9,6 +9,15 @@
 </head>
 <body>
 <%= render "layouts/header" %>
+<% flash.each do |msg_type, msg| %>
+  <div class="message-container">
+    <div class="message-<%= msg_type %>">
+      <p class="message-body">
+        <%= msg %>
+      </p>
+    </div>
+  </div>
+<% end %>
 <%= yield %>
 </body>
 </html>

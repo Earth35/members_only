@@ -13,6 +13,10 @@ $form-bg-a: #d8e0de;
 $form-bg-b: #aebfbc;
 $form-bg-c: #99afab;
 $form-bg-d: #8ea6a2;
+$border-error: #C50505;
+$bg-error: #FCB8B6;
+$border-success: #488F34;
+$bg-success: #A4E29A;
 
 /* mixins */
 
@@ -49,6 +53,14 @@ $form-bg-d: #8ea6a2;
       background: -moz-radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* For Firefox 3.6 to 15 */
       background: radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* Standard syntax */
     }
+  }
+}
+
+@mixin flash {
+  p {
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: 1.2em;
   }
 }
 
@@ -188,5 +200,25 @@ h1 {
     font-size: 1.1em;
     color: #000;
     margin: auto 3% 10px 3%;
+  }
+}
+
+/* flash messages */
+.message-container {
+  width: 30%;
+  margin: 15px auto 0 auto;
+  .message-error {
+    border-radius: 5px;
+    border: 2px solid $border-error;
+    background-color: $bg-error;
+    color: $border-error;
+    @include flash;
+  }
+  .message-success {
+    border-radius: 5px;
+    background-color: $bg-success;
+    border: 2px solid $border-success;
+    color: $border-success;
+    @include flash;
   }
 }
