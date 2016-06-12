@@ -1,8 +1,18 @@
 /* vars */
 
 $logo-color: #4DB441;
-$nav-btn-background: #727272;
-$nav-btn-center: #2E2E2E;
+$nav-btn-background: #005700;
+$nav-btn-around: #008a00;
+$nav-btn-center: #52b152;
+$btn-primary-color-a: #83c783;
+$btn-primary-color-b: #52b152;
+$btn-primary-color-c: #008a00;
+$btn-primary-color-d: #005700;
+$btn-primary-color-e: #002400;
+$form-bg-a: #d8e0de;
+$form-bg-b: #aebfbc;
+$form-bg-c: #99afab;
+$form-bg-d: #8ea6a2;
 
 /* mixins */
 
@@ -21,7 +31,8 @@ $nav-btn-center: #2E2E2E;
       font-weight: 900;
       text-decoration: none;
       letter-spacing: -1px;
-      color: $logo-color;
+      color: black;
+      text-shadow: 2px 2px 2px #434343;
       background-color: $nav-btn-background;
       height: 50px;
       line-height: 50px;
@@ -29,14 +40,14 @@ $nav-btn-center: #2E2E2E;
       display: inline-block;
       text-align: center;
       border-radius: 50px;
-      border: 3px inset $logo-color;
+      border: 3px groove $logo-color;
       box-sizing: border-box;
       /* gradient */
       background: $nav-btn-background; /* For browsers that do not support gradients */
-      background: -webkit-radial-gradient($nav-btn-center, $nav-btn-background); /* Safari 5.1 to 6.0 */
-      background: -o-radial-gradient($nav-btn-center, $nav-btn-background); /* For Opera 11.6 to 12.0 */
-      background: -moz-radial-gradient($nav-btn-center, $nav-btn-background); /* For Firefox 3.6 to 15 */
-      background: radial-gradient($nav-btn-center, $nav-btn-background); /* Standard syntax */
+      background: -webkit-radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* Safari 5.1 to 6.0 */
+      background: -o-radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* For Opera 11.6 to 12.0 */
+      background: -moz-radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* For Firefox 3.6 to 15 */
+      background: radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* Standard syntax */
     }
   }
 }
@@ -45,6 +56,13 @@ $nav-btn-center: #2E2E2E;
 
 body {
   margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: arial, sans-serif;
+  letter-spacing: -1px;
 }
 
 /* header */
@@ -59,4 +77,100 @@ body {
     height: 100%;
   }
   @include nav;
+}
+
+/* form */
+
+.col-main {
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  padding: 30px 0 30px 0;
+  background: $form-bg-a; /* Old browsers */
+  background: -moz-linear-gradient(top, $form-bg-a 5%, $form-bg-b 57%, $form-bg-c 73%, $form-bg-d 92%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $form-bg-a 5%,$form-bg-b 57%,$form-bg-c 73%,$form-bg-d 92%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $form-bg-a 5%,$form-bg-b 57%,$form-bg-c 73%,$form-bg-d 92%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  form{
+    width: 100%;
+    label{
+      color: black;
+      font-family: arial, sans-serif;
+      font-size: 1.6em;
+      letter-spacing: -1px;
+      width: 100%;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      border: 3px inset $logo-color;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    textarea {
+      width: 85%;
+      height: 75px;
+      display: block;
+      box-sizing: border-box;
+      margin: 0 auto 20px 5px;
+    }
+    .btn {
+      width: 80%;
+      height: 35px;
+      font-family: arial, sans-serif;
+      font-size: 1.5em;
+      color: $form-bg-a;
+      margin: 5px auto 5px auto;
+      display: block;
+      border: none;
+    }
+    
+    .btn-primary {
+      background: $btn-primary-color-a; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(top, $btn-primary-color-a 17%,$btn-primary-color-b 33%,$btn-primary-color-c 67%,$btn-primary-color-d 83%,$btn-primary-color-e 100%); /* Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(top, $btn-primary-color-a 17%,$btn-primary-color-b 33%,$btn-primary-color-c 67%,$btn-primary-color-d 83%,$btn-primary-color-e 100%); /* For Opera 11.6 to 12.0 */
+      background: -moz-linear-gradient(top, $btn-primary-color-a 17%, $btn-primary-color-b 33%, $btn-primary-color-c 67%, $btn-primary-color-d 83%, $btn-primary-color-e 100%); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to bottom, $btn-primary-color-a 17%,$btn-primary-color-b 33%,$btn-primary-color-c 67%,$btn-primary-color-d 83%,$btn-primary-color-e 100%); /* Standard syntax */
+    }
+  }
+}
+
+/* index */
+.col-main {
+  h2 {
+    font-family: arial, sans-serif;
+    color: black;
+    font-size: 1.3em;
+    margin: 1% 1% 1% 1%;
+  }
+  .post_body , .post_author{
+    font-family: arial, sans-serif;
+    font-size: 1em;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    margin-top: 0;
+    display: block;
+  }
+  .post_author {
+    font-family: arial narrow, sans-serif;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 1%;
+  }
+  a {
+    display: block;
+    font-family: arial, sans-serif;
+    width: 20%;
+    margin: auto;
+    padding: 5px;
+    font-size: 2em;
+    color: $form-bg-a;
+    text-shadow: 2px 2px 2px $form-bg-b;
+    text-decoration: none;
+    border: 2px solid $form-bg-a;
+    border-radius: 3px;
+  }
 }
