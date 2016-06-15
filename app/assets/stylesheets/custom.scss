@@ -35,8 +35,8 @@ $bg-success: #A4E29A;
       font-weight: 900;
       text-decoration: none;
       letter-spacing: -1px;
-      color: black;
-      text-shadow: 2px 2px 2px #434343;
+      color: #000;
+      text-shadow: 2px 2px 2px $form-bg-c;
       background-color: $nav-btn-background;
       height: 50px;
       line-height: 50px;
@@ -44,14 +44,14 @@ $bg-success: #A4E29A;
       display: inline-block;
       text-align: center;
       border-radius: 50px;
-      border: 3px groove $logo-color;
+      border: 3px solid $btn-primary-color-c;
       box-sizing: border-box;
       /* gradient */
-      background: $nav-btn-background; /* For browsers that do not support gradients */
-      background: -webkit-radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* Safari 5.1 to 6.0 */
-      background: -o-radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* For Opera 11.6 to 12.0 */
-      background: -moz-radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* For Firefox 3.6 to 15 */
-      background: radial-gradient($nav-btn-center 15%, $nav-btn-around 45%, $nav-btn-background 85%); /* Standard syntax */
+      background: $btn-primary-color-a; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(top, $btn-primary-color-a 17%,$btn-primary-color-b 33%,$btn-primary-color-c 67%,$btn-primary-color-d 83%,$btn-primary-color-e 100%); /* Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(top, $btn-primary-color-a 17%,$btn-primary-color-b 33%,$btn-primary-color-c 67%,$btn-primary-color-d 83%,$btn-primary-color-e 100%); /* For Opera 11.6 to 12.0 */
+      background: -moz-linear-gradient(top, $btn-primary-color-a 17%, $btn-primary-color-b 33%, $btn-primary-color-c 67%, $btn-primary-color-d 83%, $btn-primary-color-e 100%); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to bottom, $btn-primary-color-a 17%,$btn-primary-color-b 33%,$btn-primary-color-c 67%,$btn-primary-color-d 83%,$btn-primary-color-e 100%); /* Standard syntax */
     }
   }
 }
